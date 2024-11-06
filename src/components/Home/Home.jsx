@@ -118,7 +118,11 @@ const Home = () => {
       </header>
 
       <main className="min-h-svh flex flex-col p-8 justify-start items-center max-w-[1024px] min-w-[1024px] mx-auto">
-        <h1 className="text-3xl">Generation Thailand React - Assessment</h1>
+        <h1 className="text-3xl">
+          Generation Thailand React - {sectorUser == 0 && "Assessment"}
+          {sectorUser == 1 && "User Sector"}
+          {sectorUser == 2 && "Admin Sector"}
+        </h1>
         <div className="w-full flex justify-evenly p-8">
           <div>
             <Button
