@@ -46,8 +46,6 @@ The project consists of the following main components:
    git clone https://github.com/virachai/39-virachai-react.git
    ```
 
----
-
 2. To install the necessary dependencies, run:
 
 ```bash
