@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "daisyui": "^4.12.14",
     "react": "^18.3.1",
     "react-daisyui": "^5.0.5",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
-    "shadcn": "^1.0.0"
+    "shadcn": "^1.0.0",
+    "uid": "^2.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
