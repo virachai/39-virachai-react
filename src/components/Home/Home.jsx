@@ -154,7 +154,7 @@ const Home = () => {
                         Position
                       </th>
                       {sectorUser > 1 && (
-                        <th className="border-2 border-black w-[15rem]">
+                        <th className="border-2 border-black w-[10rem]">
                           Action
                         </th>
                       )}
