@@ -47,14 +47,14 @@ The project consists of the following main components:
    ```
 
 2. To install the necessary dependencies, run:
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
 3. To start the development server, run:
-  ```bash
-  npm start
-  ```
+   ```bash
+   npm start
+   ```
 
 ## Author
 
