@@ -2,7 +2,6 @@
 import Navbar from "../Navbar";
 import InputData from "../InputData";
 import { useState, useEffect } from "react";
-// import { uid } from "uid";
 import { Button } from "react-daisyui";
 import axios from "axios";
 
@@ -139,7 +138,7 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full flex justify-center p-8">
-          {sectorUser == 0 && <p>{"No Sector"}</p>}
+          {sectorUser == 0 && <p>{""}</p>}
           {sectorUser > 0 && (
             <div>
               {sectorUser > 1 && <InputData createData={createData} />}
