@@ -15,6 +15,11 @@ const Navbar = () => {
           target="_blank"
           link="https://github.com/virachai/39-virachai-react"
         />
+        <NavbarItem
+          text="Vercel"
+          target="_blank"
+          link="https://39-virachai-react.vercel.app/"
+        />
       </ul>
     </nav>
   );
