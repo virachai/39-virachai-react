@@ -1,0 +1,21 @@
+/* src/components/Navbar/NavbarItem.module.css */
+@tailwind components;
+
+@layer components {
+  .navbarItem {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbarItem a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+  }
+
+  .navbarItem a:hover {
+    background-color: #555;
+  }
+}
