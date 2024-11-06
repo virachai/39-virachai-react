@@ -10,7 +10,11 @@ const Navbar = () => {
       <ul>
         <NavbarItem text="Home" link="/" />
         <NavbarItem text="Owner" link="/owner" />
-        {/* <NavbarItem text="Contact" link="/contact" /> */}
+        <NavbarItem
+          text="Github"
+          target="_blank"
+          link="https://github.com/virachai/39-virachai-react"
+        />
       </ul>
     </nav>
   );
