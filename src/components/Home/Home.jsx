@@ -2,28 +2,25 @@
 import Navbar from "../Navbar";
 import InputData from "../InputData";
 import { useState, useEffect } from "react";
-import { uid } from "uid";
+// import { uid } from "uid";
 import { Button } from "react-daisyui";
 import axios from "axios";
 
 const mockEmployees = [
   {
-    id: "virachai_" + uid(),
-    name: "mock 101",
-    lastname: "mocklastname",
-    position: "Manager",
+    name: "Virachai",
+    lastname: "Wongsena",
+    position: "Senior Developer",
   },
   {
-    id: "virachai_" + uid(),
-    name: "mock 102",
-    lastname: "emmock",
-    position: "Engineer",
+    name: "Tanawin",
+    lastname: "Khanomchai",
+    position: "Project Manager",
   },
   {
-    id: "virachai_" + uid(),
-    name: "mock 103",
-    lastname: "lordmock",
-    position: "Designer",
+    name: "Suphacha",
+    lastname: "Kraisorn",
+    position: "Junior Developer",
   },
 ];
 
@@ -41,8 +38,27 @@ const Home = () => {
       const response = await axios.get(
         "https://jsd5-mock-backend.onrender.com/members"
       );
-      setEmployees([...response.data]);
+
       console.log("response.data:", response.data);
+      let data = [...response.data].filter((x) =>
+        x.position.endsWith(" (JSD#8)")
+      );
+      if (data.length === 0) {
+        // Add mock employees if the data is empty
+        for (const employee of mockEmployees) {
+          await createData(employee.name, employee.lastname, employee.position);
+        }
+        // Re-fetch the employees after adding mock employees
+        const updatedResponse = await axios.get(
+          "https://jsd5-mock-backend.onrender.com/members"
+        );
+        data = [...updatedResponse.data].filter((x) =>
+          x.position.endsWith(" (JSD#8)")
+        );
+        setEmployees([...data]);
+      } else {
+        setEmployees([...data]);
+      }
     } catch (error) {
       console.error("Error fetching employees:", error);
     }
@@ -52,7 +68,7 @@ const Home = () => {
     const requestData = {
       name: name,
       lastname: lastname,
-      position: position,
+      position: position + " (JSD#8)",
     };
 
     try {
@@ -135,7 +151,7 @@ const Home = () => {
                       <th className="border-2 border-black w-[15rem]">
                         Last Name
                       </th>
-                      <th className="border-2 border-black w-[15rem]">
+                      <th className="border-2 border-black w-[30rem]">
                         Position
                       </th>
                       {sectorUser > 1 && (
