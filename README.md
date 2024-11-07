@@ -42,11 +42,13 @@ The project consists of the following main components:
 ## Setup and Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/virachai/39-virachai-react.git
    ```
 
 2. To install the necessary dependencies, run:
+
    ```bash
    npm install
    ```
@@ -58,7 +60,7 @@ The project consists of the following main components:
 
 ## Author
 
-Virachai Wongseana
+Virachai Wongsena
 
 ## Contributions
 
